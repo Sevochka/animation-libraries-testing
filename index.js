@@ -115,8 +115,6 @@ async function startMeasurement(tab, library, particles) {
     console.error('Timeout ran out')
     return;
   }
-  // await page.emulateCPUThrottling(15)
-  // await sleep(3000)
 
   console.log('loaded')
 
@@ -139,8 +137,7 @@ async function startMeasurement(tab, library, particles) {
 
   // Wait for the animation to finish
   // await sleep(sleepTime); // Duration of the animation in milliseconds
-  await sleep(10000); // Duration of the animation in milliseconds
-
+  await sleep(sleepTime); // Duration of the animation in milliseconds
 
   // Mark the end of the animation
   await page.evaluate(() => performance.mark('end-anim'));
